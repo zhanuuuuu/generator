@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.generator.dao.pos_SaleSheetDetailMapper">
+  <resultMap id="BaseResultMap" type="com.generator.entity.pos_SaleSheetDetail">
+    <id column="cSaleSheetno" jdbcType="VARCHAR" property="cSaleSheetno" />
+    <id column="iSeed" jdbcType="INTEGER" property="iSeed" />
+    <result column="cGoodsNo" jdbcType="VARCHAR" property="cGoodsNo" />
+    <result column="cGoodsName" jdbcType="VARCHAR" property="cGoodsName" />
+    <result column="cBarCode" jdbcType="VARCHAR" property="cBarCode" />
+    <result column="cOperatorno" jdbcType="VARCHAR" property="cOperatorno" />
+    <result column="cOperatorName" jdbcType="VARCHAR" property="cOperatorName" />
+    <result column="cVipCardno" jdbcType="VARCHAR" property="cVipCardno" />
+    <result column="bAuditing" jdbcType="BIT" property="bAuditing" />
+    <result column="cChkOperno" jdbcType="VARCHAR" property="cChkOperno" />
+    <result column="cChkOper" jdbcType="VARCHAR" property="cChkOper" />
+    <result column="bSettle" jdbcType="BIT" property="bSettle" />
+    <result column="fVipScore" jdbcType="DECIMAL" property="fVipScore" />
+    <result column="fPrice" jdbcType="DECIMAL" property="fPrice" />
+    <result column="fNormalSettle" jdbcType="DECIMAL" property="fNormalSettle" />
+    <result column="bVipPrice" jdbcType="BIT" property="bVipPrice" />
+    <result column="fVipPrice" jdbcType="DECIMAL" property="fVipPrice" />
+    <result column="bVipRate" jdbcType="BIT" property="bVipRate" />
+    <result column="fVipRate" jdbcType="DECIMAL" property="fVipRate" />
+    <result column="fQuantity" jdbcType="DECIMAL" property="fQuantity" />
+    <result column="fAgio" jdbcType="DECIMAL" property="fAgio" />
+    <result column="fLastSettle0" jdbcType="DECIMAL" property="fLastSettle0" />
+    <result column="fLastSettle" jdbcType="DECIMAL" property="fLastSettle" />
+    <result column="cManager" jdbcType="VARCHAR" property="cManager" />
+    <result column="cManagerno" jdbcType="VARCHAR" property="cManagerno" />
+    <result column="dSaleDate" jdbcType="TIMESTAMP" property="dSaleDate" />
+    <result column="cSaleTime" jdbcType="VARCHAR" property="cSaleTime" />
+    <result column="dFinanceDate" jdbcType="TIMESTAMP" property="dFinanceDate" />
+    <result column="cWorkerno" jdbcType="VARCHAR" property="cWorkerno" />
+    <result column="cWorker" jdbcType="VARCHAR" property="cWorker" />
+    <result column="bPost" jdbcType="BIT" property="bPost" />
+    <result column="bChecked" jdbcType="BIT" property="bChecked" />
+    <result column="cCheckNo" jdbcType="VARCHAR" property="cCheckNo" />
+    <result column="dCheck" jdbcType="TIMESTAMP" property="dCheck" />
+    <result column="cVipNo" jdbcType="VARCHAR" property="cVipNo" />
+    <result column="bHidePrice" jdbcType="BIT" property="bHidePrice" />
+    <result column="bHideQty" jdbcType="BIT" property="bHideQty" />
+    <result column="bWeight" jdbcType="BIT" property="bWeight" />
+    <result column="fNormalVipScore" jdbcType="DECIMAL" property="fNormalVipScore" />
+    <result column="bExchange" jdbcType="BIT" property="bExchange" />
+    <result column="fSupRatio_exchange" jdbcType="DECIMAL" property="fSupRatio_exchange" />
+    <result column="bPresent" jdbcType="BIT" property="bPresent" />
+    <result column="bSend" jdbcType="BIT" property="bSend" />
+    <result column="cWHno" jdbcType="VARCHAR" property="cWHno" />
+    <result column="bLimited" jdbcType="BIT" property="bLimited" />
+    <result column="fVipScore_cur" jdbcType="DECIMAL" property="fVipScore_cur" />
+    <result column="cBanci_ID" jdbcType="VARCHAR" property="cBanci_ID" />
+    <result column="iLineNo_Banci" jdbcType="INTEGER" property="iLineNo_Banci" />
+    <result column="fDiscount" jdbcType="DECIMAL" property="fDiscount" />
+    <result column="fPrice_Exe" jdbcType="DECIMAL" property="fPrice_Exe" />
+    <result column="fRate_Exe" jdbcType="DECIMAL" property="fRate_Exe" />
+    <result column="cBanci" jdbcType="VARCHAR" property="cBanci" />
+    <result column="bMoneycard" jdbcType="BIT" property="bMoneycard" />
+    <result column="fMoneyValue" jdbcType="DECIMAL" property="fMoneyValue" />
+    <result column="cPloyNo" jdbcType="VARCHAR" property="cPloyNo" />
+    <result column="cPloyName" jdbcType="VARCHAR" property="cPloyName" />
+    <result column="cPloyTypeNo" jdbcType="VARCHAR" property="cPloyTypeNo" />
+    <result column="cPloyTypeName" jdbcType="VARCHAR" property="cPloyTypeName" />
+    <result column="iGroupType" jdbcType="INTEGER" property="iGroupType" />
+    <result column="fRatio_GroupPloy" jdbcType="DECIMAL" property="fRatio_GroupPloy" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map">
+    delete from pos_SaleSheetDetail
+    where cSaleSheetno = #{cSaleSheetno,jdbcType=VARCHAR}
+      and iSeed = #{iSeed,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.generator.entity.pos_SaleSheetDetail">
+    insert into pos_SaleSheetDetail (cSaleSheetno, iSeed, cGoodsNo, 
+      cGoodsName, cBarCode, cOperatorno, 
+      cOperatorName, cVipCardno, bAuditing, 
+      cChkOperno, cChkOper, bSettle, 
+      fVipScore, fPrice, fNormalSettle, 
+      bVipPrice, fVipPrice, bVipRate, 
+      fVipRate, fQuantity, fAgio, 
+      fLastSettle0, fLastSettle, cManager, 
+      cManagerno, dSaleDate, cSaleTime, 
+      dFinanceDate, cWorkerno, cWorker, 
+      bPost, bChecked, cCheckNo, 
+      dCheck, cVipNo, bHidePrice, 
+      bHideQty, bWeight, fNormalVipScore, 
+      bExchange, fSupRatio_exchange, bPresent, 
+      bSend, cWHno, bLimited, fVipScore_cur, 
+      cBanci_ID, iLineNo_Banci, fDiscount, 
+      fPrice_Exe, fRate_Exe, cBanci, 
+      bMoneycard, fMoneyValue, cPloyNo, 
+      cPloyName, cPloyTypeNo, cPloyTypeName, 
+      iGroupType, fRatio_GroupPloy)
+    values (#{cSaleSheetno,jdbcType=VARCHAR}, #{iSeed,jdbcType=INTEGER}, #{cGoodsNo,jdbcType=VARCHAR}, 
+      #{cGoodsName,jdbcType=VARCHAR}, #{cBarCode,jdbcType=VARCHAR}, #{cOperatorno,jdbcType=VARCHAR}, 
+      #{cOperatorName,jdbcType=VARCHAR}, #{cVipCardno,jdbcType=VARCHAR}, #{bAuditing,jdbcType=BIT}, 
+      #{cChkOperno,jdbcType=VARCHAR}, #{cChkOper,jdbcType=VARCHAR}, #{bSettle,jdbcType=BIT}, 
+      #{fVipScore,jdbcType=DECIMAL}, #{fPrice,jdbcType=DECIMAL}, #{fNormalSettle,jdbcType=DECIMAL}, 
+      #{bVipPrice,jdbcType=BIT}, #{fVipPrice,jdbcType=DECIMAL}, #{bVipRate,jdbcType=BIT}, 
+      #{fVipRate,jdbcType=DECIMAL}, #{fQuantity,jdbcType=DECIMAL}, #{fAgio,jdbcType=DECIMAL}, 
+      #{fLastSettle0,jdbcType=DECIMAL}, #{fLastSettle,jdbcType=DECIMAL}, #{cManager,jdbcType=VARCHAR}, 
+      #{cManagerno,jdbcType=VARCHAR}, #{dSaleDate,jdbcType=TIMESTAMP}, #{cSaleTime,jdbcType=VARCHAR}, 
+      #{dFinanceDate,jdbcType=TIMESTAMP}, #{cWorkerno,jdbcType=VARCHAR}, #{cWorker,jdbcType=VARCHAR}, 
+      #{bPost,jdbcType=BIT}, #{bChecked,jdbcType=BIT}, #{cCheckNo,jdbcType=VARCHAR}, 
+      #{dCheck,jdbcType=TIMESTAMP}, #{cVipNo,jdbcType=VARCHAR}, #{bHidePrice,jdbcType=BIT}, 
+      #{bHideQty,jdbcType=BIT}, #{bWeight,jdbcType=BIT}, #{fNormalVipScore,jdbcType=DECIMAL}, 
+      #{bExchange,jdbcType=BIT}, #{fSupRatio_exchange,jdbcType=DECIMAL}, #{bPresent,jdbcType=BIT}, 
+      #{bSend,jdbcType=BIT}, #{cWHno,jdbcType=VARCHAR}, #{bLimited,jdbcType=BIT}, #{fVipScore_cur,jdbcType=DECIMAL}, 
+      #{cBanci_ID,jdbcType=VARCHAR}, #{iLineNo_Banci,jdbcType=INTEGER}, #{fDiscount,jdbcType=DECIMAL}, 
+      #{fPrice_Exe,jdbcType=DECIMAL}, #{fRate_Exe,jdbcType=DECIMAL}, #{cBanci,jdbcType=VARCHAR}, 
+      #{bMoneycard,jdbcType=BIT}, #{fMoneyValue,jdbcType=DECIMAL}, #{cPloyNo,jdbcType=VARCHAR}, 
+      #{cPloyName,jdbcType=VARCHAR}, #{cPloyTypeNo,jdbcType=VARCHAR}, #{cPloyTypeName,jdbcType=VARCHAR}, 
+      #{iGroupType,jdbcType=INTEGER}, #{fRatio_GroupPloy,jdbcType=DECIMAL})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.generator.entity.pos_SaleSheetDetail">
+    update pos_SaleSheetDetail
+    set cGoodsNo = #{cGoodsNo,jdbcType=VARCHAR},
+      cGoodsName = #{cGoodsName,jdbcType=VARCHAR},
+      cBarCode = #{cBarCode,jdbcType=VARCHAR},
+      cOperatorno = #{cOperatorno,jdbcType=VARCHAR},
+      cOperatorName = #{cOperatorName,jdbcType=VARCHAR},
+      cVipCardno = #{cVipCardno,jdbcType=VARCHAR},
+      bAuditing = #{bAuditing,jdbcType=BIT},
+      cChkOperno = #{cChkOperno,jdbcType=VARCHAR},
+      cChkOper = #{cChkOper,jdbcType=VARCHAR},
+      bSettle = #{bSettle,jdbcType=BIT},
+      fVipScore = #{fVipScore,jdbcType=DECIMAL},
+      fPrice = #{fPrice,jdbcType=DECIMAL},
+      fNormalSettle = #{fNormalSettle,jdbcType=DECIMAL},
+      bVipPrice = #{bVipPrice,jdbcType=BIT},
+      fVipPrice = #{fVipPrice,jdbcType=DECIMAL},
+      bVipRate = #{bVipRate,jdbcType=BIT},
+      fVipRate = #{fVipRate,jdbcType=DECIMAL},
+      fQuantity = #{fQuantity,jdbcType=DECIMAL},
+      fAgio = #{fAgio,jdbcType=DECIMAL},
+      fLastSettle0 = #{fLastSettle0,jdbcType=DECIMAL},
+      fLastSettle = #{fLastSettle,jdbcType=DECIMAL},
+      cManager = #{cManager,jdbcType=VARCHAR},
+      cManagerno = #{cManagerno,jdbcType=VARCHAR},
+      dSaleDate = #{dSaleDate,jdbcType=TIMESTAMP},
+      cSaleTime = #{cSaleTime,jdbcType=VARCHAR},
+      dFinanceDate = #{dFinanceDate,jdbcType=TIMESTAMP},
+      cWorkerno = #{cWorkerno,jdbcType=VARCHAR},
+      cWorker = #{cWorker,jdbcType=VARCHAR},
+      bPost = #{bPost,jdbcType=BIT},
+      bChecked = #{bChecked,jdbcType=BIT},
+      cCheckNo = #{cCheckNo,jdbcType=VARCHAR},
+      dCheck = #{dCheck,jdbcType=TIMESTAMP},
+      cVipNo = #{cVipNo,jdbcType=VARCHAR},
+      bHidePrice = #{bHidePrice,jdbcType=BIT},
+      bHideQty = #{bHideQty,jdbcType=BIT},
+      bWeight = #{bWeight,jdbcType=BIT},
+      fNormalVipScore = #{fNormalVipScore,jdbcType=DECIMAL},
+      bExchange = #{bExchange,jdbcType=BIT},
+      fSupRatio_exchange = #{fSupRatio_exchange,jdbcType=DECIMAL},
+      bPresent = #{bPresent,jdbcType=BIT},
+      bSend = #{bSend,jdbcType=BIT},
+      cWHno = #{cWHno,jdbcType=VARCHAR},
+      bLimited = #{bLimited,jdbcType=BIT},
+      fVipScore_cur = #{fVipScore_cur,jdbcType=DECIMAL},
+      cBanci_ID = #{cBanci_ID,jdbcType=VARCHAR},
+      iLineNo_Banci = #{iLineNo_Banci,jdbcType=INTEGER},
+      fDiscount = #{fDiscount,jdbcType=DECIMAL},
+      fPrice_Exe = #{fPrice_Exe,jdbcType=DECIMAL},
+      fRate_Exe = #{fRate_Exe,jdbcType=DECIMAL},
+      cBanci = #{cBanci,jdbcType=VARCHAR},
+      bMoneycard = #{bMoneycard,jdbcType=BIT},
+      fMoneyValue = #{fMoneyValue,jdbcType=DECIMAL},
+      cPloyNo = #{cPloyNo,jdbcType=VARCHAR},
+      cPloyName = #{cPloyName,jdbcType=VARCHAR},
+      cPloyTypeNo = #{cPloyTypeNo,jdbcType=VARCHAR},
+      cPloyTypeName = #{cPloyTypeName,jdbcType=VARCHAR},
+      iGroupType = #{iGroupType,jdbcType=INTEGER},
+      fRatio_GroupPloy = #{fRatio_GroupPloy,jdbcType=DECIMAL}
+    where cSaleSheetno = #{cSaleSheetno,jdbcType=VARCHAR}
+      and iSeed = #{iSeed,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="map" resultMap="BaseResultMap">
+    select cSaleSheetno, iSeed, cGoodsNo, cGoodsName, cBarCode, cOperatorno, cOperatorName, 
+    cVipCardno, bAuditing, cChkOperno, cChkOper, bSettle, fVipScore, fPrice, fNormalSettle, 
+    bVipPrice, fVipPrice, bVipRate, fVipRate, fQuantity, fAgio, fLastSettle0, fLastSettle, 
+    cManager, cManagerno, dSaleDate, cSaleTime, dFinanceDate, cWorkerno, cWorker, bPost, 
+    bChecked, cCheckNo, dCheck, cVipNo, bHidePrice, bHideQty, bWeight, fNormalVipScore, 
+    bExchange, fSupRatio_exchange, bPresent, bSend, cWHno, bLimited, fVipScore_cur, cBanci_ID, 
+    iLineNo_Banci, fDiscount, fPrice_Exe, fRate_Exe, cBanci, bMoneycard, fMoneyValue, 
+    cPloyNo, cPloyName, cPloyTypeNo, cPloyTypeName, iGroupType, fRatio_GroupPloy
+    from pos_SaleSheetDetail
+    where cSaleSheetno = #{cSaleSheetno,jdbcType=VARCHAR}
+      and iSeed = #{iSeed,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select cSaleSheetno, iSeed, cGoodsNo, cGoodsName, cBarCode, cOperatorno, cOperatorName, 
+    cVipCardno, bAuditing, cChkOperno, cChkOper, bSettle, fVipScore, fPrice, fNormalSettle, 
+    bVipPrice, fVipPrice, bVipRate, fVipRate, fQuantity, fAgio, fLastSettle0, fLastSettle, 
+    cManager, cManagerno, dSaleDate, cSaleTime, dFinanceDate, cWorkerno, cWorker, bPost, 
+    bChecked, cCheckNo, dCheck, cVipNo, bHidePrice, bHideQty, bWeight, fNormalVipScore, 
+    bExchange, fSupRatio_exchange, bPresent, bSend, cWHno, bLimited, fVipScore_cur, cBanci_ID, 
+    iLineNo_Banci, fDiscount, fPrice_Exe, fRate_Exe, cBanci, bMoneycard, fMoneyValue, 
+    cPloyNo, cPloyName, cPloyTypeNo, cPloyTypeName, iGroupType, fRatio_GroupPloy
+    from pos_SaleSheetDetail
+  </select>
+</mapper>

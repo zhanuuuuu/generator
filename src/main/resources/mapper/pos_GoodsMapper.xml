@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.generator.dao.pos_GoodsMapper">
+  <resultMap id="BaseResultMap" type="com.generator.entity.pos_Goods">
+    <id column="cGoodsNo" jdbcType="VARCHAR" property="cGoodsNo" />
+    <result column="cUnitedNo" jdbcType="VARCHAR" property="cUnitedNo" />
+    <result column="cGoodsName" jdbcType="VARCHAR" property="cGoodsName" />
+    <result column="cGoodsTypeno" jdbcType="VARCHAR" property="cGoodsTypeno" />
+    <result column="cGoodsTypename" jdbcType="VARCHAR" property="cGoodsTypename" />
+    <result column="cBarcode" jdbcType="VARCHAR" property="cBarcode" />
+    <result column="cUnit" jdbcType="VARCHAR" property="cUnit" />
+    <result column="cSpec" jdbcType="VARCHAR" property="cSpec" />
+    <result column="fNormalPrice" jdbcType="DECIMAL" property="fNormalPrice" />
+    <result column="fVipPrice" jdbcType="DECIMAL" property="fVipPrice" />
+    <result column="cProductUnit" jdbcType="VARCHAR" property="cProductUnit" />
+    <result column="cHelpCode" jdbcType="VARCHAR" property="cHelpCode" />
+    <result column="cTaxRate" jdbcType="DECIMAL" property="cTaxRate" />
+    <result column="fPreservationUp" jdbcType="DECIMAL" property="fPreservationUp" />
+    <result column="fPreservationDown" jdbcType="DECIMAL" property="fPreservationDown" />
+    <result column="cLevel" jdbcType="VARCHAR" property="cLevel" />
+    <result column="bSuspend" jdbcType="BIT" property="bSuspend" />
+    <result column="bDeling" jdbcType="BIT" property="bDeling" />
+    <result column="bDeled" jdbcType="BIT" property="bDeled" />
+    <result column="dSuspendDate1" jdbcType="TIMESTAMP" property="dSuspendDate1" />
+    <result column="dSuspendDate2" jdbcType="TIMESTAMP" property="dSuspendDate2" />
+    <result column="dDelingDate1" jdbcType="TIMESTAMP" property="dDelingDate1" />
+    <result column="dDelingDate2" jdbcType="TIMESTAMP" property="dDelingDate2" />
+    <result column="fVipScore" jdbcType="DECIMAL" property="fVipScore" />
+    <result column="bProducted" jdbcType="BIT" property="bProducted" />
+    <result column="cProductNo" jdbcType="VARCHAR" property="cProductNo" />
+    <result column="bWeight" jdbcType="BIT" property="bWeight" />
+    <result column="bHidePrice" jdbcType="BIT" property="bHidePrice" />
+    <result column="bHideQty" jdbcType="BIT" property="bHideQty" />
+    <result column="pinpaino" jdbcType="VARCHAR" property="pinpaino" />
+    <result column="pinpai" jdbcType="VARCHAR" property="pinpai" />
+    <result column="bUpdate" jdbcType="BIT" property="bUpdate" />
+    <result column="fVipPrice_Student" jdbcType="DECIMAL" property="fVipPrice_Student" />
+    <result column="bStorage" jdbcType="BIT" property="bStorage" />
+    <result column="bLimitQty" jdbcType="BIT" property="bLimitQty" />
+    <result column="bReturnMoney" jdbcType="BIT" property="bReturnMoney" />
+    <result column="bStorageToNull" jdbcType="BIT" property="bStorageToNull" />
+    <result column="bDazhe" jdbcType="BIT" property="bDazhe" />
+    <result column="b_VipPricePlan" jdbcType="BIT" property="b_VipPricePlan" />
+    <result column="bMoneycard" jdbcType="BIT" property="bMoneycard" />
+    <result column="fMoneyValue" jdbcType="DECIMAL" property="fMoneyValue" />
+    <result column="fPreservation_soft" jdbcType="DECIMAL" property="fPreservation_soft" />
+    <result column="fVipScore_0" jdbcType="DECIMAL" property="fVipScore_0" />
+    <result column="cSupNo" jdbcType="VARCHAR" property="cSupNo" />
+    <result column="cGoodsImage" jdbcType="LONGVARBINARY" property="cGoodsImage" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from pos_Goods
+    where cGoodsNo = #{cGoodsNo,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.generator.entity.pos_Goods">
+    insert into pos_Goods (cGoodsNo, cUnitedNo, cGoodsName, 
+      cGoodsTypeno, cGoodsTypename, cBarcode, 
+      cUnit, cSpec, fNormalPrice, 
+      fVipPrice, cProductUnit, cHelpCode, 
+      cTaxRate, fPreservationUp, fPreservationDown, 
+      cLevel, bSuspend, bDeling, 
+      bDeled, dSuspendDate1, dSuspendDate2, 
+      dDelingDate1, dDelingDate2, fVipScore, 
+      bProducted, cProductNo, bWeight, 
+      bHidePrice, bHideQty, pinpaino, 
+      pinpai, bUpdate, fVipPrice_Student, 
+      bStorage, bLimitQty, bReturnMoney, 
+      bStorageToNull, bDazhe, b_VipPricePlan, 
+      bMoneycard, fMoneyValue, fPreservation_soft, 
+      fVipScore_0, cSupNo, cGoodsImage
+      )
+    values (#{cGoodsNo,jdbcType=VARCHAR}, #{cUnitedNo,jdbcType=VARCHAR}, #{cGoodsName,jdbcType=VARCHAR}, 
+      #{cGoodsTypeno,jdbcType=VARCHAR}, #{cGoodsTypename,jdbcType=VARCHAR}, #{cBarcode,jdbcType=VARCHAR}, 
+      #{cUnit,jdbcType=VARCHAR}, #{cSpec,jdbcType=VARCHAR}, #{fNormalPrice,jdbcType=DECIMAL}, 
+      #{fVipPrice,jdbcType=DECIMAL}, #{cProductUnit,jdbcType=VARCHAR}, #{cHelpCode,jdbcType=VARCHAR}, 
+      #{cTaxRate,jdbcType=DECIMAL}, #{fPreservationUp,jdbcType=DECIMAL}, #{fPreservationDown,jdbcType=DECIMAL}, 
+      #{cLevel,jdbcType=VARCHAR}, #{bSuspend,jdbcType=BIT}, #{bDeling,jdbcType=BIT}, 
+      #{bDeled,jdbcType=BIT}, #{dSuspendDate1,jdbcType=TIMESTAMP}, #{dSuspendDate2,jdbcType=TIMESTAMP}, 
+      #{dDelingDate1,jdbcType=TIMESTAMP}, #{dDelingDate2,jdbcType=TIMESTAMP}, #{fVipScore,jdbcType=DECIMAL}, 
+      #{bProducted,jdbcType=BIT}, #{cProductNo,jdbcType=VARCHAR}, #{bWeight,jdbcType=BIT}, 
+      #{bHidePrice,jdbcType=BIT}, #{bHideQty,jdbcType=BIT}, #{pinpaino,jdbcType=VARCHAR}, 
+      #{pinpai,jdbcType=VARCHAR}, #{bUpdate,jdbcType=BIT}, #{fVipPrice_Student,jdbcType=DECIMAL}, 
+      #{bStorage,jdbcType=BIT}, #{bLimitQty,jdbcType=BIT}, #{bReturnMoney,jdbcType=BIT}, 
+      #{bStorageToNull,jdbcType=BIT}, #{bDazhe,jdbcType=BIT}, #{b_VipPricePlan,jdbcType=BIT}, 
+      #{bMoneycard,jdbcType=BIT}, #{fMoneyValue,jdbcType=DECIMAL}, #{fPreservation_soft,jdbcType=DECIMAL}, 
+      #{fVipScore_0,jdbcType=DECIMAL}, #{cSupNo,jdbcType=VARCHAR}, #{cGoodsImage,jdbcType=LONGVARBINARY}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.generator.entity.pos_Goods">
+    update pos_Goods
+    set cUnitedNo = #{cUnitedNo,jdbcType=VARCHAR},
+      cGoodsName = #{cGoodsName,jdbcType=VARCHAR},
+      cGoodsTypeno = #{cGoodsTypeno,jdbcType=VARCHAR},
+      cGoodsTypename = #{cGoodsTypename,jdbcType=VARCHAR},
+      cBarcode = #{cBarcode,jdbcType=VARCHAR},
+      cUnit = #{cUnit,jdbcType=VARCHAR},
+      cSpec = #{cSpec,jdbcType=VARCHAR},
+      fNormalPrice = #{fNormalPrice,jdbcType=DECIMAL},
+      fVipPrice = #{fVipPrice,jdbcType=DECIMAL},
+      cProductUnit = #{cProductUnit,jdbcType=VARCHAR},
+      cHelpCode = #{cHelpCode,jdbcType=VARCHAR},
+      cTaxRate = #{cTaxRate,jdbcType=DECIMAL},
+      fPreservationUp = #{fPreservationUp,jdbcType=DECIMAL},
+      fPreservationDown = #{fPreservationDown,jdbcType=DECIMAL},
+      cLevel = #{cLevel,jdbcType=VARCHAR},
+      bSuspend = #{bSuspend,jdbcType=BIT},
+      bDeling = #{bDeling,jdbcType=BIT},
+      bDeled = #{bDeled,jdbcType=BIT},
+      dSuspendDate1 = #{dSuspendDate1,jdbcType=TIMESTAMP},
+      dSuspendDate2 = #{dSuspendDate2,jdbcType=TIMESTAMP},
+      dDelingDate1 = #{dDelingDate1,jdbcType=TIMESTAMP},
+      dDelingDate2 = #{dDelingDate2,jdbcType=TIMESTAMP},
+      fVipScore = #{fVipScore,jdbcType=DECIMAL},
+      bProducted = #{bProducted,jdbcType=BIT},
+      cProductNo = #{cProductNo,jdbcType=VARCHAR},
+      bWeight = #{bWeight,jdbcType=BIT},
+      bHidePrice = #{bHidePrice,jdbcType=BIT},
+      bHideQty = #{bHideQty,jdbcType=BIT},
+      pinpaino = #{pinpaino,jdbcType=VARCHAR},
+      pinpai = #{pinpai,jdbcType=VARCHAR},
+      bUpdate = #{bUpdate,jdbcType=BIT},
+      fVipPrice_Student = #{fVipPrice_Student,jdbcType=DECIMAL},
+      bStorage = #{bStorage,jdbcType=BIT},
+      bLimitQty = #{bLimitQty,jdbcType=BIT},
+      bReturnMoney = #{bReturnMoney,jdbcType=BIT},
+      bStorageToNull = #{bStorageToNull,jdbcType=BIT},
+      bDazhe = #{bDazhe,jdbcType=BIT},
+      b_VipPricePlan = #{b_VipPricePlan,jdbcType=BIT},
+      bMoneycard = #{bMoneycard,jdbcType=BIT},
+      fMoneyValue = #{fMoneyValue,jdbcType=DECIMAL},
+      fPreservation_soft = #{fPreservation_soft,jdbcType=DECIMAL},
+      fVipScore_0 = #{fVipScore_0,jdbcType=DECIMAL},
+      cSupNo = #{cSupNo,jdbcType=VARCHAR},
+      cGoodsImage = #{cGoodsImage,jdbcType=LONGVARBINARY}
+    where cGoodsNo = #{cGoodsNo,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select cGoodsNo, cUnitedNo, cGoodsName, cGoodsTypeno, cGoodsTypename, cBarcode, cUnit, 
+    cSpec, fNormalPrice, fVipPrice, cProductUnit, cHelpCode, cTaxRate, fPreservationUp, 
+    fPreservationDown, cLevel, bSuspend, bDeling, bDeled, dSuspendDate1, dSuspendDate2, 
+    dDelingDate1, dDelingDate2, fVipScore, bProducted, cProductNo, bWeight, bHidePrice, 
+    bHideQty, pinpaino, pinpai, bUpdate, fVipPrice_Student, bStorage, bLimitQty, bReturnMoney, 
+    bStorageToNull, bDazhe, b_VipPricePlan, bMoneycard, fMoneyValue, fPreservation_soft, 
+    fVipScore_0, cSupNo, cGoodsImage
+    from pos_Goods
+    where cGoodsNo = #{cGoodsNo,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select cGoodsNo, cUnitedNo, cGoodsName, cGoodsTypeno, cGoodsTypename, cBarcode, cUnit, 
+    cSpec, fNormalPrice, fVipPrice, cProductUnit, cHelpCode, cTaxRate, fPreservationUp, 
+    fPreservationDown, cLevel, bSuspend, bDeling, bDeled, dSuspendDate1, dSuspendDate2, 
+    dDelingDate1, dDelingDate2, fVipScore, bProducted, cProductNo, bWeight, bHidePrice, 
+    bHideQty, pinpaino, pinpai, bUpdate, fVipPrice_Student, bStorage, bLimitQty, bReturnMoney, 
+    bStorageToNull, bDazhe, b_VipPricePlan, bMoneycard, fMoneyValue, fPreservation_soft, 
+    fVipScore_0, cSupNo, cGoodsImage
+    from pos_Goods
+  </select>
+</mapper>

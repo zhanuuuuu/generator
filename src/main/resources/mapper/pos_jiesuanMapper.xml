@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.generator.dao.pos_jiesuanMapper">
+  <resultMap id="BaseResultMap" type="com.generator.entity.pos_jiesuan">
+    <id column="sheetno" jdbcType="VARCHAR" property="sheetno" />
+    <id column="jstype" jdbcType="VARCHAR" property="jstype" />
+    <result column="mianzhi" jdbcType="DECIMAL" property="mianzhi" />
+    <result column="zhekou" jdbcType="DECIMAL" property="zhekou" />
+    <result column="zhaoling" jdbcType="DECIMAL" property="zhaoling" />
+    <result column="shishou" jdbcType="DECIMAL" property="shishou" />
+    <result column="jstime" jdbcType="TIMESTAMP" property="jstime" />
+    <result column="zdriqi" jdbcType="TIMESTAMP" property="zdriqi" />
+    <result column="jiaozhang" jdbcType="SMALLINT" property="jiaozhang" />
+    <result column="jiaozhangtime" jdbcType="TIMESTAMP" property="jiaozhangtime" />
+    <result column="jiaozhangdate" jdbcType="TIMESTAMP" property="jiaozhangdate" />
+    <result column="shouyinyuanno" jdbcType="VARCHAR" property="shouyinyuanno" />
+    <result column="shouyinyuanmc" jdbcType="VARCHAR" property="shouyinyuanmc" />
+    <result column="jiaokuantime" jdbcType="TIMESTAMP" property="jiaokuantime" />
+    <result column="shoukuanno" jdbcType="VARCHAR" property="shoukuanno" />
+    <result column="shoukuanname" jdbcType="VARCHAR" property="shoukuanname" />
+    <result column="netjiecun" jdbcType="SMALLINT" property="netjiecun" />
+    <result column="orientmoney" jdbcType="DECIMAL" property="orientmoney" />
+    <result column="leftmoney" jdbcType="DECIMAL" property="leftmoney" />
+    <result column="storevalue" jdbcType="SMALLINT" property="storevalue" />
+    <result column="detail" jdbcType="VARCHAR" property="detail" />
+    <result column="bPost" jdbcType="BIT" property="bPost" />
+    <result column="cWHno" jdbcType="VARCHAR" property="cWHno" />
+    <result column="invoiceNo" jdbcType="VARCHAR" property="invoiceNo" />
+    <result column="cBanci_ID" jdbcType="VARCHAR" property="cBanci_ID" />
+    <result column="iLineNo_Banci" jdbcType="INTEGER" property="iLineNo_Banci" />
+    <result column="cBanci" jdbcType="VARCHAR" property="cBanci" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map">
+    delete from pos_jiesuan
+    where sheetno = #{sheetno,jdbcType=VARCHAR}
+      and jstype = #{jstype,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.generator.entity.pos_jiesuan">
+    insert into pos_jiesuan (sheetno, jstype, mianzhi, 
+      zhekou, zhaoling, shishou, 
+      jstime, zdriqi, jiaozhang, 
+      jiaozhangtime, jiaozhangdate, shouyinyuanno, 
+      shouyinyuanmc, jiaokuantime, shoukuanno, 
+      shoukuanname, netjiecun, orientmoney, 
+      leftmoney, storevalue, detail, 
+      bPost, cWHno, invoiceNo, 
+      cBanci_ID, iLineNo_Banci, cBanci
+      )
+    values (#{sheetno,jdbcType=VARCHAR}, #{jstype,jdbcType=VARCHAR}, #{mianzhi,jdbcType=DECIMAL}, 
+      #{zhekou,jdbcType=DECIMAL}, #{zhaoling,jdbcType=DECIMAL}, #{shishou,jdbcType=DECIMAL}, 
+      #{jstime,jdbcType=TIMESTAMP}, #{zdriqi,jdbcType=TIMESTAMP}, #{jiaozhang,jdbcType=SMALLINT}, 
+      #{jiaozhangtime,jdbcType=TIMESTAMP}, #{jiaozhangdate,jdbcType=TIMESTAMP}, #{shouyinyuanno,jdbcType=VARCHAR}, 
+      #{shouyinyuanmc,jdbcType=VARCHAR}, #{jiaokuantime,jdbcType=TIMESTAMP}, #{shoukuanno,jdbcType=VARCHAR}, 
+      #{shoukuanname,jdbcType=VARCHAR}, #{netjiecun,jdbcType=SMALLINT}, #{orientmoney,jdbcType=DECIMAL}, 
+      #{leftmoney,jdbcType=DECIMAL}, #{storevalue,jdbcType=SMALLINT}, #{detail,jdbcType=VARCHAR}, 
+      #{bPost,jdbcType=BIT}, #{cWHno,jdbcType=VARCHAR}, #{invoiceNo,jdbcType=VARCHAR}, 
+      #{cBanci_ID,jdbcType=VARCHAR}, #{iLineNo_Banci,jdbcType=INTEGER}, #{cBanci,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.generator.entity.pos_jiesuan">
+    update pos_jiesuan
+    set mianzhi = #{mianzhi,jdbcType=DECIMAL},
+      zhekou = #{zhekou,jdbcType=DECIMAL},
+      zhaoling = #{zhaoling,jdbcType=DECIMAL},
+      shishou = #{shishou,jdbcType=DECIMAL},
+      jstime = #{jstime,jdbcType=TIMESTAMP},
+      zdriqi = #{zdriqi,jdbcType=TIMESTAMP},
+      jiaozhang = #{jiaozhang,jdbcType=SMALLINT},
+      jiaozhangtime = #{jiaozhangtime,jdbcType=TIMESTAMP},
+      jiaozhangdate = #{jiaozhangdate,jdbcType=TIMESTAMP},
+      shouyinyuanno = #{shouyinyuanno,jdbcType=VARCHAR},
+      shouyinyuanmc = #{shouyinyuanmc,jdbcType=VARCHAR},
+      jiaokuantime = #{jiaokuantime,jdbcType=TIMESTAMP},
+      shoukuanno = #{shoukuanno,jdbcType=VARCHAR},
+      shoukuanname = #{shoukuanname,jdbcType=VARCHAR},
+      netjiecun = #{netjiecun,jdbcType=SMALLINT},
+      orientmoney = #{orientmoney,jdbcType=DECIMAL},
+      leftmoney = #{leftmoney,jdbcType=DECIMAL},
+      storevalue = #{storevalue,jdbcType=SMALLINT},
+      detail = #{detail,jdbcType=VARCHAR},
+      bPost = #{bPost,jdbcType=BIT},
+      cWHno = #{cWHno,jdbcType=VARCHAR},
+      invoiceNo = #{invoiceNo,jdbcType=VARCHAR},
+      cBanci_ID = #{cBanci_ID,jdbcType=VARCHAR},
+      iLineNo_Banci = #{iLineNo_Banci,jdbcType=INTEGER},
+      cBanci = #{cBanci,jdbcType=VARCHAR}
+    where sheetno = #{sheetno,jdbcType=VARCHAR}
+      and jstype = #{jstype,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="map" resultMap="BaseResultMap">
+    select sheetno, jstype, mianzhi, zhekou, zhaoling, shishou, jstime, zdriqi, jiaozhang, 
+    jiaozhangtime, jiaozhangdate, shouyinyuanno, shouyinyuanmc, jiaokuantime, shoukuanno, 
+    shoukuanname, netjiecun, orientmoney, leftmoney, storevalue, detail, bPost, cWHno, 
+    invoiceNo, cBanci_ID, iLineNo_Banci, cBanci
+    from pos_jiesuan
+    where sheetno = #{sheetno,jdbcType=VARCHAR}
+      and jstype = #{jstype,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select sheetno, jstype, mianzhi, zhekou, zhaoling, shishou, jstime, zdriqi, jiaozhang, 
+    jiaozhangtime, jiaozhangdate, shouyinyuanno, shouyinyuanmc, jiaokuantime, shoukuanno, 
+    shoukuanname, netjiecun, orientmoney, leftmoney, storevalue, detail, bPost, cWHno, 
+    invoiceNo, cBanci_ID, iLineNo_Banci, cBanci
+    from pos_jiesuan
+  </select>
+</mapper>

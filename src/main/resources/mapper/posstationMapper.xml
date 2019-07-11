@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.generator.dao.posstationMapper">
+  <resultMap id="BaseResultMap" type="com.generator.entity.posstation">
+    <result column="appId" jdbcType="VARCHAR" property="appId" />
+    <result column="posname" jdbcType="VARCHAR" property="posname" />
+    <result column="posid" jdbcType="VARCHAR" property="posid" />
+    <result column="cWHno" jdbcType="VARCHAR" property="cWHno" />
+    <result column="Pos_Day" jdbcType="VARCHAR" property="pos_Day" />
+    <result column="cStoreNo" jdbcType="VARCHAR" property="cStoreNo" />
+    <result column="cMachineID" jdbcType="VARCHAR" property="cMachineID" />
+    <result column="CMachineKey" jdbcType="VARCHAR" property="CMachineKey" />
+  </resultMap>
+  <insert id="insert" parameterType="com.generator.entity.posstation">
+    insert into posstation (appId, posname, posid, 
+      cWHno, Pos_Day, cStoreNo, 
+      cMachineID, CMachineKey)
+    values (#{appId,jdbcType=VARCHAR}, #{posname,jdbcType=VARCHAR}, #{posid,jdbcType=VARCHAR}, 
+      #{cWHno,jdbcType=VARCHAR}, #{pos_Day,jdbcType=VARCHAR}, #{cStoreNo,jdbcType=VARCHAR}, 
+      #{cMachineID,jdbcType=VARCHAR}, #{CMachineKey,jdbcType=VARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select appId, posname, posid, cWHno, Pos_Day, cStoreNo, cMachineID, CMachineKey
+    from posstation
+  </select>
+</mapper>

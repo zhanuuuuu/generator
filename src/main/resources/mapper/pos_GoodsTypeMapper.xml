@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.generator.dao.pos_GoodsTypeMapper">
+  <resultMap id="BaseResultMap" type="com.generator.entity.pos_GoodsType">
+    <id column="cGoodsTypeno" jdbcType="VARCHAR" property="cGoodsTypeno" />
+    <result column="cGoodsTypename" jdbcType="VARCHAR" property="cGoodsTypename" />
+    <result column="cParentNo" jdbcType="VARCHAR" property="cParentNo" />
+    <result column="cDetail" jdbcType="VARCHAR" property="cDetail" />
+    <result column="bWeight" jdbcType="BIT" property="bWeight" />
+    <result column="fValue_con" jdbcType="DECIMAL" property="fValue_con" />
+    <result column="fValue_Score" jdbcType="DECIMAL" property="fValue_Score" />
+    <result column="Color_idNo" jdbcType="VARCHAR" property="color_idNo" />
+    <result column="cDeptNo" jdbcType="VARCHAR" property="cDeptNo" />
+    <result column="cDept" jdbcType="VARCHAR" property="cDept" />
+    <result column="cPath" jdbcType="VARCHAR" property="cPath" />
+    <result column="bChange" jdbcType="CHAR" property="bChange" />
+    <result column="bChangedDate" jdbcType="TIMESTAMP" property="bChangedDate" />
+    <result column="bfresh" jdbcType="BIT" property="bfresh" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from Pos_GoodsType
+    where cGoodsTypeno = #{cGoodsTypeno,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.generator.entity.pos_GoodsType">
+    insert into Pos_GoodsType (cGoodsTypeno, cGoodsTypename, cParentNo, 
+      cDetail, bWeight, fValue_con, 
+      fValue_Score, Color_idNo, cDeptNo, 
+      cDept, cPath, bChange, 
+      bChangedDate, bfresh)
+    values (#{cGoodsTypeno,jdbcType=VARCHAR}, #{cGoodsTypename,jdbcType=VARCHAR}, #{cParentNo,jdbcType=VARCHAR}, 
+      #{cDetail,jdbcType=VARCHAR}, #{bWeight,jdbcType=BIT}, #{fValue_con,jdbcType=DECIMAL}, 
+      #{fValue_Score,jdbcType=DECIMAL}, #{color_idNo,jdbcType=VARCHAR}, #{cDeptNo,jdbcType=VARCHAR}, 
+      #{cDept,jdbcType=VARCHAR}, #{cPath,jdbcType=VARCHAR}, #{bChange,jdbcType=CHAR}, 
+      #{bChangedDate,jdbcType=TIMESTAMP}, #{bfresh,jdbcType=BIT})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.generator.entity.pos_GoodsType">
+    update Pos_GoodsType
+    set cGoodsTypename = #{cGoodsTypename,jdbcType=VARCHAR},
+      cParentNo = #{cParentNo,jdbcType=VARCHAR},
+      cDetail = #{cDetail,jdbcType=VARCHAR},
+      bWeight = #{bWeight,jdbcType=BIT},
+      fValue_con = #{fValue_con,jdbcType=DECIMAL},
+      fValue_Score = #{fValue_Score,jdbcType=DECIMAL},
+      Color_idNo = #{color_idNo,jdbcType=VARCHAR},
+      cDeptNo = #{cDeptNo,jdbcType=VARCHAR},
+      cDept = #{cDept,jdbcType=VARCHAR},
+      cPath = #{cPath,jdbcType=VARCHAR},
+      bChange = #{bChange,jdbcType=CHAR},
+      bChangedDate = #{bChangedDate,jdbcType=TIMESTAMP},
+      bfresh = #{bfresh,jdbcType=BIT}
+    where cGoodsTypeno = #{cGoodsTypeno,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select cGoodsTypeno, cGoodsTypename, cParentNo, cDetail, bWeight, fValue_con, fValue_Score, 
+    Color_idNo, cDeptNo, cDept, cPath, bChange, bChangedDate, bfresh
+    from Pos_GoodsType
+    where cGoodsTypeno = #{cGoodsTypeno,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select cGoodsTypeno, cGoodsTypename, cParentNo, cDetail, bWeight, fValue_con, fValue_Score, 
+    Color_idNo, cDeptNo, cDept, cPath, bChange, bChangedDate, bfresh
+    from Pos_GoodsType
+  </select>
+</mapper>

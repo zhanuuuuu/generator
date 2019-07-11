@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.generator.dao.pos_PloyOfSaleMapper">
+  <resultMap id="BaseResultMap" type="com.generator.entity.pos_PloyOfSale">
+    <id column="cPloyNo" jdbcType="VARCHAR" property="cPloyNo" />
+    <id column="cGoodsNo" jdbcType="VARCHAR" property="cGoodsNo" />
+    <id column="iLineNo" jdbcType="INTEGER" property="iLineNo" />
+    <result column="cGoodsName" jdbcType="VARCHAR" property="cGoodsName" />
+    <result column="fQuantity_Ploy" jdbcType="DECIMAL" property="fQuantity_Ploy" />
+    <result column="fPrice_SO" jdbcType="DECIMAL" property="fPrice_SO" />
+    <result column="dDateStart" jdbcType="TIMESTAMP" property="dDateStart" />
+    <result column="cTimeStart" jdbcType="CHAR" property="cTimeStart" />
+    <result column="dDateEnd" jdbcType="TIMESTAMP" property="dDateEnd" />
+    <result column="cTimeEnd" jdbcType="CHAR" property="cTimeEnd" />
+    <result column="iPriority" jdbcType="SMALLINT" property="iPriority" />
+    <result column="bSO" jdbcType="BIT" property="bSO" />
+    <result column="bPresent" jdbcType="BIT" property="bPresent" />
+    <result column="cPresentPloyNo" jdbcType="VARCHAR" property="cPresentPloyNo" />
+    <result column="cPloyTypeNo" jdbcType="VARCHAR" property="cPloyTypeNo" />
+    <result column="cPloyTypeName" jdbcType="VARCHAR" property="cPloyTypeName" />
+    <result column="bEnabled" jdbcType="BIT" property="bEnabled" />
+    <result column="Week1" jdbcType="BIT" property="week1" />
+    <result column="Week2" jdbcType="BIT" property="week2" />
+    <result column="Week3" jdbcType="BIT" property="week3" />
+    <result column="Week4" jdbcType="BIT" property="week4" />
+    <result column="Week5" jdbcType="BIT" property="week5" />
+    <result column="Week6" jdbcType="BIT" property="week6" />
+    <result column="Week7" jdbcType="BIT" property="week7" />
+    <result column="Hour0" jdbcType="BIT" property="hour0" />
+    <result column="Hour1" jdbcType="BIT" property="hour1" />
+    <result column="Hour2" jdbcType="BIT" property="hour2" />
+    <result column="Hour3" jdbcType="BIT" property="hour3" />
+    <result column="Hour4" jdbcType="BIT" property="hour4" />
+    <result column="Hour5" jdbcType="BIT" property="hour5" />
+    <result column="Hour6" jdbcType="BIT" property="hour6" />
+    <result column="Hour7" jdbcType="BIT" property="hour7" />
+    <result column="Hour8" jdbcType="BIT" property="hour8" />
+    <result column="Hour9" jdbcType="BIT" property="hour9" />
+    <result column="Hour10" jdbcType="BIT" property="hour10" />
+    <result column="Hour11" jdbcType="BIT" property="hour11" />
+    <result column="Hour12" jdbcType="BIT" property="hour12" />
+    <result column="Hour13" jdbcType="BIT" property="hour13" />
+    <result column="Hour14" jdbcType="BIT" property="hour14" />
+    <result column="Hour15" jdbcType="BIT" property="hour15" />
+    <result column="Hour16" jdbcType="BIT" property="hour16" />
+    <result column="Hour17" jdbcType="BIT" property="hour17" />
+    <result column="Hour18" jdbcType="BIT" property="hour18" />
+    <result column="Hour19" jdbcType="BIT" property="hour19" />
+    <result column="Hour20" jdbcType="BIT" property="hour20" />
+    <result column="Hour21" jdbcType="BIT" property="hour21" />
+    <result column="Hour22" jdbcType="BIT" property="hour22" />
+    <result column="Hour23" jdbcType="BIT" property="hour23" />
+    <result column="fVipValue" jdbcType="DECIMAL" property="fVipValue" />
+    <result column="bLimitQty" jdbcType="BIT" property="bLimitQty" />
+    <result column="fLimitQty" jdbcType="DECIMAL" property="fLimitQty" />
+    <result column="bJiOu" jdbcType="BIT" property="bJiOu" />
+    <result column="fQty_Ji" jdbcType="DECIMAL" property="fQty_Ji" />
+    <result column="fPrice_ji" jdbcType="DECIMAL" property="fPrice_ji" />
+    <result column="fQty_Ou" jdbcType="DECIMAL" property="fQty_Ou" />
+    <result column="fPrice_Ou" jdbcType="DECIMAL" property="fPrice_Ou" />
+    <result column="fRatio_JiOu" jdbcType="DECIMAL" property="fRatio_JiOu" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map">
+    delete from pos_PloyOfSale
+    where cPloyNo = #{cPloyNo,jdbcType=VARCHAR}
+      and cGoodsNo = #{cGoodsNo,jdbcType=VARCHAR}
+      and iLineNo = #{iLineNo,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.generator.entity.pos_PloyOfSale">
+    insert into pos_PloyOfSale (cPloyNo, cGoodsNo, iLineNo, 
+      cGoodsName, fQuantity_Ploy, fPrice_SO, 
+      dDateStart, cTimeStart, dDateEnd, 
+      cTimeEnd, iPriority, bSO, 
+      bPresent, cPresentPloyNo, cPloyTypeNo, 
+      cPloyTypeName, bEnabled, Week1, 
+      Week2, Week3, Week4, Week5, 
+      Week6, Week7, Hour0, Hour1, 
+      Hour2, Hour3, Hour4, Hour5, 
+      Hour6, Hour7, Hour8, Hour9, 
+      Hour10, Hour11, Hour12, Hour13, 
+      Hour14, Hour15, Hour16, Hour17, 
+      Hour18, Hour19, Hour20, Hour21, 
+      Hour22, Hour23, fVipValue, 
+      bLimitQty, fLimitQty, bJiOu, 
+      fQty_Ji, fPrice_ji, fQty_Ou, 
+      fPrice_Ou, fRatio_JiOu)
+    values (#{cPloyNo,jdbcType=VARCHAR}, #{cGoodsNo,jdbcType=VARCHAR}, #{iLineNo,jdbcType=INTEGER}, 
+      #{cGoodsName,jdbcType=VARCHAR}, #{fQuantity_Ploy,jdbcType=DECIMAL}, #{fPrice_SO,jdbcType=DECIMAL}, 
+      #{dDateStart,jdbcType=TIMESTAMP}, #{cTimeStart,jdbcType=CHAR}, #{dDateEnd,jdbcType=TIMESTAMP}, 
+      #{cTimeEnd,jdbcType=CHAR}, #{iPriority,jdbcType=SMALLINT}, #{bSO,jdbcType=BIT}, 
+      #{bPresent,jdbcType=BIT}, #{cPresentPloyNo,jdbcType=VARCHAR}, #{cPloyTypeNo,jdbcType=VARCHAR}, 
+      #{cPloyTypeName,jdbcType=VARCHAR}, #{bEnabled,jdbcType=BIT}, #{week1,jdbcType=BIT}, 
+      #{week2,jdbcType=BIT}, #{week3,jdbcType=BIT}, #{week4,jdbcType=BIT}, #{week5,jdbcType=BIT}, 
+      #{week6,jdbcType=BIT}, #{week7,jdbcType=BIT}, #{hour0,jdbcType=BIT}, #{hour1,jdbcType=BIT}, 
+      #{hour2,jdbcType=BIT}, #{hour3,jdbcType=BIT}, #{hour4,jdbcType=BIT}, #{hour5,jdbcType=BIT}, 
+      #{hour6,jdbcType=BIT}, #{hour7,jdbcType=BIT}, #{hour8,jdbcType=BIT}, #{hour9,jdbcType=BIT}, 
+      #{hour10,jdbcType=BIT}, #{hour11,jdbcType=BIT}, #{hour12,jdbcType=BIT}, #{hour13,jdbcType=BIT}, 
+      #{hour14,jdbcType=BIT}, #{hour15,jdbcType=BIT}, #{hour16,jdbcType=BIT}, #{hour17,jdbcType=BIT}, 
+      #{hour18,jdbcType=BIT}, #{hour19,jdbcType=BIT}, #{hour20,jdbcType=BIT}, #{hour21,jdbcType=BIT}, 
+      #{hour22,jdbcType=BIT}, #{hour23,jdbcType=BIT}, #{fVipValue,jdbcType=DECIMAL}, 
+      #{bLimitQty,jdbcType=BIT}, #{fLimitQty,jdbcType=DECIMAL}, #{bJiOu,jdbcType=BIT}, 
+      #{fQty_Ji,jdbcType=DECIMAL}, #{fPrice_ji,jdbcType=DECIMAL}, #{fQty_Ou,jdbcType=DECIMAL}, 
+      #{fPrice_Ou,jdbcType=DECIMAL}, #{fRatio_JiOu,jdbcType=DECIMAL})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.generator.entity.pos_PloyOfSale">
+    update pos_PloyOfSale
+    set cGoodsName = #{cGoodsName,jdbcType=VARCHAR},
+      fQuantity_Ploy = #{fQuantity_Ploy,jdbcType=DECIMAL},
+      fPrice_SO = #{fPrice_SO,jdbcType=DECIMAL},
+      dDateStart = #{dDateStart,jdbcType=TIMESTAMP},
+      cTimeStart = #{cTimeStart,jdbcType=CHAR},
+      dDateEnd = #{dDateEnd,jdbcType=TIMESTAMP},
+      cTimeEnd = #{cTimeEnd,jdbcType=CHAR},
+      iPriority = #{iPriority,jdbcType=SMALLINT},
+      bSO = #{bSO,jdbcType=BIT},
+      bPresent = #{bPresent,jdbcType=BIT},
+      cPresentPloyNo = #{cPresentPloyNo,jdbcType=VARCHAR},
+      cPloyTypeNo = #{cPloyTypeNo,jdbcType=VARCHAR},
+      cPloyTypeName = #{cPloyTypeName,jdbcType=VARCHAR},
+      bEnabled = #{bEnabled,jdbcType=BIT},
+      Week1 = #{week1,jdbcType=BIT},
+      Week2 = #{week2,jdbcType=BIT},
+      Week3 = #{week3,jdbcType=BIT},
+      Week4 = #{week4,jdbcType=BIT},
+      Week5 = #{week5,jdbcType=BIT},
+      Week6 = #{week6,jdbcType=BIT},
+      Week7 = #{week7,jdbcType=BIT},
+      Hour0 = #{hour0,jdbcType=BIT},
+      Hour1 = #{hour1,jdbcType=BIT},
+      Hour2 = #{hour2,jdbcType=BIT},
+      Hour3 = #{hour3,jdbcType=BIT},
+      Hour4 = #{hour4,jdbcType=BIT},
+      Hour5 = #{hour5,jdbcType=BIT},
+      Hour6 = #{hour6,jdbcType=BIT},
+      Hour7 = #{hour7,jdbcType=BIT},
+      Hour8 = #{hour8,jdbcType=BIT},
+      Hour9 = #{hour9,jdbcType=BIT},
+      Hour10 = #{hour10,jdbcType=BIT},
+      Hour11 = #{hour11,jdbcType=BIT},
+      Hour12 = #{hour12,jdbcType=BIT},
+      Hour13 = #{hour13,jdbcType=BIT},
+      Hour14 = #{hour14,jdbcType=BIT},
+      Hour15 = #{hour15,jdbcType=BIT},
+      Hour16 = #{hour16,jdbcType=BIT},
+      Hour17 = #{hour17,jdbcType=BIT},
+      Hour18 = #{hour18,jdbcType=BIT},
+      Hour19 = #{hour19,jdbcType=BIT},
+      Hour20 = #{hour20,jdbcType=BIT},
+      Hour21 = #{hour21,jdbcType=BIT},
+      Hour22 = #{hour22,jdbcType=BIT},
+      Hour23 = #{hour23,jdbcType=BIT},
+      fVipValue = #{fVipValue,jdbcType=DECIMAL},
+      bLimitQty = #{bLimitQty,jdbcType=BIT},
+      fLimitQty = #{fLimitQty,jdbcType=DECIMAL},
+      bJiOu = #{bJiOu,jdbcType=BIT},
+      fQty_Ji = #{fQty_Ji,jdbcType=DECIMAL},
+      fPrice_ji = #{fPrice_ji,jdbcType=DECIMAL},
+      fQty_Ou = #{fQty_Ou,jdbcType=DECIMAL},
+      fPrice_Ou = #{fPrice_Ou,jdbcType=DECIMAL},
+      fRatio_JiOu = #{fRatio_JiOu,jdbcType=DECIMAL}
+    where cPloyNo = #{cPloyNo,jdbcType=VARCHAR}
+      and cGoodsNo = #{cGoodsNo,jdbcType=VARCHAR}
+      and iLineNo = #{iLineNo,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="map" resultMap="BaseResultMap">
+    select cPloyNo, cGoodsNo, iLineNo, cGoodsName, fQuantity_Ploy, fPrice_SO, dDateStart, 
+    cTimeStart, dDateEnd, cTimeEnd, iPriority, bSO, bPresent, cPresentPloyNo, cPloyTypeNo, 
+    cPloyTypeName, bEnabled, Week1, Week2, Week3, Week4, Week5, Week6, Week7, Hour0, 
+    Hour1, Hour2, Hour3, Hour4, Hour5, Hour6, Hour7, Hour8, Hour9, Hour10, Hour11, Hour12, 
+    Hour13, Hour14, Hour15, Hour16, Hour17, Hour18, Hour19, Hour20, Hour21, Hour22, Hour23, 
+    fVipValue, bLimitQty, fLimitQty, bJiOu, fQty_Ji, fPrice_ji, fQty_Ou, fPrice_Ou, fRatio_JiOu
+    from pos_PloyOfSale
+    where cPloyNo = #{cPloyNo,jdbcType=VARCHAR}
+      and cGoodsNo = #{cGoodsNo,jdbcType=VARCHAR}
+      and iLineNo = #{iLineNo,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select cPloyNo, cGoodsNo, iLineNo, cGoodsName, fQuantity_Ploy, fPrice_SO, dDateStart, 
+    cTimeStart, dDateEnd, cTimeEnd, iPriority, bSO, bPresent, cPresentPloyNo, cPloyTypeNo, 
+    cPloyTypeName, bEnabled, Week1, Week2, Week3, Week4, Week5, Week6, Week7, Hour0, 
+    Hour1, Hour2, Hour3, Hour4, Hour5, Hour6, Hour7, Hour8, Hour9, Hour10, Hour11, Hour12, 
+    Hour13, Hour14, Hour15, Hour16, Hour17, Hour18, Hour19, Hour20, Hour21, Hour22, Hour23, 
+    fVipValue, bLimitQty, fLimitQty, bJiOu, fQty_Ji, fPrice_ji, fQty_Ou, fPrice_Ou, fRatio_JiOu
+    from pos_PloyOfSale
+  </select>
+</mapper>

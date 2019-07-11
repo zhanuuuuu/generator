@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.generator.dao.Pos_ConfigMapper">
+  <resultMap id="BaseResultMap" type="com.generator.entity.Pos_Config">
+    <id column="cID" jdbcType="VARCHAR" property="cID" />
+    <result column="iGoodsNoStart" jdbcType="INTEGER" property="iGoodsNoStart" />
+    <result column="iGoodsNoEnd" jdbcType="INTEGER" property="iGoodsNoEnd" />
+    <result column="iMoneyStart" jdbcType="INTEGER" property="iMoneyStart" />
+    <result column="iMoneyEnd" jdbcType="INTEGER" property="iMoneyEnd" />
+    <result column="iRatio" jdbcType="DECIMAL" property="iRatio" />
+    <result column="bMlt" jdbcType="BIT" property="bMlt" />
+    <result column="bDazhe" jdbcType="BIT" property="bDazhe" />
+    <result column="cCharID" jdbcType="VARCHAR" property="cCharID" />
+    <result column="iMoneyStart18" jdbcType="INTEGER" property="iMoneyStart18" />
+    <result column="iMoneyEnd18" jdbcType="INTEGER" property="iMoneyEnd18" />
+    <result column="iWeightStart" jdbcType="INTEGER" property="iWeightStart" />
+    <result column="iWeightEnd" jdbcType="INTEGER" property="iWeightEnd" />
+    <result column="iWeightStart18" jdbcType="INTEGER" property="iWeightStart18" />
+    <result column="iWeightEnd18" jdbcType="INTEGER" property="iWeightEnd18" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from Pos_Config
+    where cID = #{cID,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.generator.entity.Pos_Config">
+    insert into Pos_Config (cID, iGoodsNoStart, iGoodsNoEnd, 
+      iMoneyStart, iMoneyEnd, iRatio, 
+      bMlt, bDazhe, cCharID, iMoneyStart18, 
+      iMoneyEnd18, iWeightStart, iWeightEnd, 
+      iWeightStart18, iWeightEnd18)
+    values (#{cID,jdbcType=VARCHAR}, #{iGoodsNoStart,jdbcType=INTEGER}, #{iGoodsNoEnd,jdbcType=INTEGER}, 
+      #{iMoneyStart,jdbcType=INTEGER}, #{iMoneyEnd,jdbcType=INTEGER}, #{iRatio,jdbcType=DECIMAL}, 
+      #{bMlt,jdbcType=BIT}, #{bDazhe,jdbcType=BIT}, #{cCharID,jdbcType=VARCHAR}, #{iMoneyStart18,jdbcType=INTEGER}, 
+      #{iMoneyEnd18,jdbcType=INTEGER}, #{iWeightStart,jdbcType=INTEGER}, #{iWeightEnd,jdbcType=INTEGER}, 
+      #{iWeightStart18,jdbcType=INTEGER}, #{iWeightEnd18,jdbcType=INTEGER})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.generator.entity.Pos_Config">
+    update Pos_Config
+    set iGoodsNoStart = #{iGoodsNoStart,jdbcType=INTEGER},
+      iGoodsNoEnd = #{iGoodsNoEnd,jdbcType=INTEGER},
+      iMoneyStart = #{iMoneyStart,jdbcType=INTEGER},
+      iMoneyEnd = #{iMoneyEnd,jdbcType=INTEGER},
+      iRatio = #{iRatio,jdbcType=DECIMAL},
+      bMlt = #{bMlt,jdbcType=BIT},
+      bDazhe = #{bDazhe,jdbcType=BIT},
+      cCharID = #{cCharID,jdbcType=VARCHAR},
+      iMoneyStart18 = #{iMoneyStart18,jdbcType=INTEGER},
+      iMoneyEnd18 = #{iMoneyEnd18,jdbcType=INTEGER},
+      iWeightStart = #{iWeightStart,jdbcType=INTEGER},
+      iWeightEnd = #{iWeightEnd,jdbcType=INTEGER},
+      iWeightStart18 = #{iWeightStart18,jdbcType=INTEGER},
+      iWeightEnd18 = #{iWeightEnd18,jdbcType=INTEGER}
+    where cID = #{cID,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select cID, iGoodsNoStart, iGoodsNoEnd, iMoneyStart, iMoneyEnd, iRatio, bMlt, bDazhe, 
+    cCharID, iMoneyStart18, iMoneyEnd18, iWeightStart, iWeightEnd, iWeightStart18, iWeightEnd18
+    from Pos_Config
+    where cID = #{cID,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select cID, iGoodsNoStart, iGoodsNoEnd, iMoneyStart, iMoneyEnd, iRatio, bMlt, bDazhe, 
+    cCharID, iMoneyStart18, iMoneyEnd18, iWeightStart, iWeightEnd, iWeightStart18, iWeightEnd18
+    from Pos_Config
+  </select>
+</mapper>
